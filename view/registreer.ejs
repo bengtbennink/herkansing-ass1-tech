@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>BiosBuddy</title>
+</head>
+
+<body>
+    <header>
+        <h1>BiosBuddy</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/registreren">Registreer</a></li>
+                <li><a href="/login">login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="curtain">
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+    </section>
+
+    <main>
+        <section class="card">
+            <article>
+                <h2>Registreren</h2>
+                <form action=/registreren method=post>
+                    <p><label for="voornaam">Voornaam:</label> <input type="text" name="voornaam" required></p>
+                    <p><label for="password">Wachtwoord:</label> <input type="password" minlength="8" placeholder="" name="password" required></p>
+                    <p><label for="email">Email adres:</label> <input type="email" placeholder="" name="email" required></p>
+                    <hr>
+                    <p><label for="leeftijd">Je leeftijd:</label> <input type="number" placeholder="" name="leeftijd" required></p>
+                    <p><label for="geslacht">Je geslacht:</label>
+                        <input type="radio" name="geslacht" value="man">Man
+                        <input type="radio" name="geslacht" value="vrouw">Vrouw
+                        <input type="radio" name="geslacht" value="overig">Overig
+                    </p>
+                    <p><label for="woonplaats">Woonplaats:</label> <input type="text" placeholder="" name="woonplaats" required></p>
+                    <hr>
+                    <p><label for="opzoek">Op zoek naar een:</label> <select name="opzoek">
+        <option value="man">Man</option>
+    <option value="vrouw">Vrouw</option>
+    <option value="geen voorkeur">Geen voorkeur</option>
+  </select></p>
+                    <p><label for="bios">Bioscoop maximaal:</label> <select name="bios">
+        <option value="10">10</option>
+    <option value="25">25</option>
+    <option value="50">50</option>
+    <option value="meer dan 50">meer dan 50</option>
+  </select> KM ver weg</p>
+                    <hr>
+                    <p><label for="quote">Favoriete film quote:</label> <input type="text" maxlength="50" placeholder="" name="quote" required></p>
+
+                    <button type="submit">login</button>
+                </form>
+            </article>
+        </section>
+    </main>
+
+</body>
+
+</html>

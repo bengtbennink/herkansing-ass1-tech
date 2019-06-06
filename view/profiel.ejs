@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>BiosBuddy</title>
+</head>
+
+<body>
+    <header>
+        <h1>BiosBuddy</h1>
+        <nav>
+            <ul>
+                <li><a href="films">Films</a></li>
+                <li><a href="mijnprofiel">Mijn profiel</a></li>
+                <li><a href="/loguit">Uitloggen</a></li>
+                <li><a href="/admin">Admin paneel</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="curtain">
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+    </section>
+
+    <main>
+
+        <section class="card">
+            <article>
+                <h2>
+                    <%= data[0].voornaam %>
+                </h2>
+                <p><img src="images/profielfoto/<%= data[0].profielfoto %>" class="profielfoto"></p>
+                <p><i><%= data[0].leeftijd %> jaar oud</i></p>
+                <p class="filmquote">"
+                    <%= data[0].quote %>"</p>
+            </article>
+        </section>
+        <section class="card">
+            <article>
+                <h2>Pas aan</h2>
+                <p>Favoriete film quote:</p>
+                <form action=/updatequote method=post>
+                    <p><input type="text" maxlength="50" placeholder="" name="quote"></p>
+                    <button>Update</button>
+                </form>
+
+                <hr>
+
+                <p>Upload een profielfoto</p>
+                <form action=/profielfoto method=post enctype=multipart/form-data>
+                    <p><input name="profielfoto" type="file" accept="image/*"></p>
+                    <button>Update</button>
+                </form>
+            </article>
+
+
+        </section>
+    </main>
+
+
+</body>
+
+</html>

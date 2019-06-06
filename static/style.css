@@ -1,0 +1,168 @@
+body {
+    background-color: #180000;
+    margin:0;
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    font-size: 1em;
+
+}
+
+header {
+    background-color: #800000;
+    padding: 5px;
+    display: flex;
+    color: white;
+    padding-bottom: 0px;
+}
+
+
+h1 {
+    margin-left: 20px;
+    color: white;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    padding-top: 20px;
+    display: flex;
+}
+
+
+li {
+  color: black;
+  list-style-type: none;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.halfCircleBottom{
+     height:30px;
+     width:100%;
+     border-radius: 0 0 90px 90px;
+     background: #730000;
+}
+
+.curtain {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.profielfoto {
+    width: 50%;
+    border-radius: 50%;
+}
+
+.filmquote {
+    font-family: NexaLight;
+    font-size: 1.5em;
+}
+
+
+.card {
+    background-color: 	#f9f9f9;
+    padding: 20px;
+    border-style: solid;
+    border-color: #800000;
+    max-width: 500px;
+    margin: auto;
+    width: 75%;
+    border-width: thick;
+    border-radius: 2%;
+    margin-bottom: 20px;
+     text-align: center;
+}
+}
+
+*/* Form validation */*
+
+  input:focus:invalid {
+    background-image: url(images/invalid.png);
+    background-position: right top;
+    background-repeat: no-repeat;
+  }
+  input:required:valid {
+    background-image: url(images/checkmark.png);
+    background-position: right;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+  }
+
+.profielfoto {
+    width: 100px;
+    height: 100px;
+}
+
+
+
+*/* eind van Form validation */*
+
+
+
+
+#likebutton {
+ background-color: red;
+ color: white;
+}
+
+#likebutton:active {
+    background-color: white;
+}
+
+#datebutton {
+    height: 30px;
+    width: 200px;
+    border-radius: 20px;
+    background: #730000;
+    color: white;
+    margin-top: 10px;
+}
+
+
+button {
+    height: 30px;
+    width: 25%;
+    border-radius: 20px;
+    background: #730000;
+    color: white;
+    margin-right: 10px;
+}
+
+button:active {
+    background-color: white;
+}
+
+#invalid {
+    height: 25px;
+    float: right;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid red;
+}
+
+#filmboxen {
+   display: flex;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+#thumpnail {
+    max-width: 95%;
+    max-height: 300px;
+}
+
+textarea {
+    resize: vertical;
+    width: 100%;
+}
+
+#contactbutton {
+    margin-left:auto; 
+    margin-right:0;
+}

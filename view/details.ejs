@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>BiosBuddy</title>
+</head>
+
+<body>
+    <header>
+        <h1>BiosBuddy</h1>
+        <nav>
+            <ul>
+                <li><a href="films">Films</a></li>
+                <li><a href="mijnprofiel">Mijn profiel</a></li>
+                <li><a href="/loguit">Uitloggen</a></li>
+                <li><a href="/admin">Admin paneel</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="curtain">
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+    </section>
+
+    <main>
+        <section class="card">
+            <article>
+                <h2>
+                    <%= data.voornaam %>
+                </h2>
+                <p><img src="images/profielfoto/<%= data.profielfoto %>" class="profielfoto"></p>
+                <p>
+                    <%= data.leeftijd %> jaar oud</p>
+                <p class="filmquote">"
+                    <%= data.quote %>"</p>
+                <article class="matchbuttons">
+                    <button><a href="mailto:<%= data.email %>">Stuur een bericht</a></button>
+                </article>
+            </article>
+        </section>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>BiosBuddy</title>
+</head>
+
+<body>
+    <header>
+        <h1>BiosBuddy</h1>
+        <nav>
+            <ul>
+                <li><a href="films">Films</a></li>
+                <li><a href="/mijnprofiel">Mijn profiel</a></li>
+                <li><a href="/loguit">Uitloggen</a></li>
+                <li><a href="/admin">Admin paneel</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="curtain">
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+    </section>
+
+    <main>
+        <h1>Deze buddy's vinden dezelfde film leuk</h1>
+        <% for (var index = 0; index < data.length; index++) { %>
+            <section class="card">
+                <article>
+                    <h2>
+                        <%= data[index].voornaam %>
+                    </h2>
+                    <p><img src="images/profielfoto/<%= data[index].profielfoto %>" class="profielfoto"></p>
+                    <p><i><%= data[index].leeftijd %> jaar oud</i></p>
+                    <aside class="profiel">
+                        <button><a href="/<%= data[index].id %>">Bekijk profiel</a></button>
+                    </aside>
+                </article>
+            </section>
+            <% } %>
+    </main>
+
+</body>
+
+</html>

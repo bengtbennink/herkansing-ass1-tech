@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src=/index.js></script>
+    <meta charset="UTF-8">
+    <title>BiosBuddy</title>
+</head>
+
+<body>
+    <header>
+        <h1>BiosBuddy</h1>
+        <nav>
+            <ul>
+                <li><a href="films">Films</a></li>
+                <li><a href="mijnprofiel">Mijn profiel</a></li>
+                <li><a href="/loguit">Uitloggen</a></li>
+                <li><a href="/admin">Admin paneel</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="curtain">
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+    </section>
+
+    <main>
+        <h1>In dit prototype is het admin paneel nog niet beveiligd</h1>
+        <section class="card">
+            <article>
+                <h2>Voeg een film toe</h2>
+                <form action=/ method=post enctype=multipart/form-data>
+                    <p><label>Title <input name=title required></label></p>
+                    <p><label>Afbeelding <input name=afbeelding type=file accept=image/*></label></p>
+                    <p><label>Beschrijving<textarea name=description rows=5></textarea></label></p>
+                    <button>Voeg toe</button>
+                </form>
+            </article>
+        </section>
+
+        <section class="card">
+            <article>
+                <h2>Verwijder een film</h2>
+                <% for (var index = 0; index < data.length; index++) { %>
+                    <p>
+                        <%= data[index].titel %> <a href="/verwijderfilm=<%= data[index].id %>"><img src="images/delete.png"></a>
+                    </p>
+                    <% } %>
+            </article>
+        </section>
+    </main>
+
+</body>
+
+</html>

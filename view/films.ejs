@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>BiosBuddy</title>
+</head>
+
+<body>
+    <header>
+        <h1>BiosBuddy</h1>
+        <nav>
+            <ul>
+                <li><a href="films">Films</a></li>
+                <li><a href="mijnprofiel">Mijn profiel</a></li>
+               <li><a href="/loguit">Uitloggen</a></li>
+                <li><a href="/admin">Admin paneel</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="curtain">
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+        <div class="halfCircleBottom"></div>
+    </section>
+
+    <h1>Kies een film</h1>
+    <main id="filmboxen">
+
+        <% for (var index = 0; index < data.length; index++) { %>
+            <section class="card">
+                <article>
+                    <h2>
+                        <%= data[index].titel %>
+                    </h2>
+                    <img id="thumpnail" src="images/<%= data[index].image %>">
+                    <h3>Beschrijving</h3>
+                    <p>
+                        <%= data[index].beschrijving %>
+                    </p>
+                    <form action="matches">
+                        <button type="submit">Kies</button>
+                    </form>
+                </article>
+            </section>
+            <% } %>
+    </main>
+</body>
+
+</html>
